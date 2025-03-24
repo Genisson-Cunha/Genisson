@@ -1,0 +1,152 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f6d3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #e8e5bc;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 8px;
+}
+
+/* Seções Gerais */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section.intro,
+section.education,
+section.projects,
+section.contact {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Carrossel de Habilidades */
+.carrossel-selecao {
+    text-align: center;
+}
+
+.carrossel {
+    width: 300px;  /* Ajuste conforme necessário */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.pista-carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-slide {
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.carrossel-slide img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Botões de navegação do carrossel */
+.carrossel-botao {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #e8e5bc;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    .carrossel-botao :hover{
+    background-color: #d4d0aa;
+    transform: translateY(-7px);
+    transition-duration: 0.5s;
+    box-shadow: 0px 15px 20px 0px #fff;
+
+}
+
+.carrossel-button:hover {
+    background-color: #d4d0aa;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carrossel-botao.prev {
+    left: 10px;
+}
+
+.carrossel-botao.next {
+    right: 10px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e8e5bc;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .carrossel {
+        width: 90%;
+    }
+    
+    .carrossel-slide {
+        min-width: 90%;
+    }
+}
+
+/* Estilização da seção de Contato */
+section.contact a {
+    color: #333; /* Cor padrão dos links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+section.contact a:hover {
+    color: #e8e5bc; /* Cor ao passar o mouse */
+}
